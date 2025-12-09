@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Gamelog
+        </title>
+        <style>
+            body{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #16181c;
+                color: white;
+                line-height: 1.4;
+                margin: 0;
+            }
+            header{
+                padding: 20px 0px;
+                background-color: #1f1f1f;
+            }
+            .container{
+                width: 90%;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .navigator{
+                display: flex;
+                justify-content: space-between; 
+                align-items: center;
+            }
+            .logo{
+                font-size: 28px;
+                font-weight: bold;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            .logospan{
+                color: #ff4500;
+            }
+            .navigator_links a{
+                color: #fff;
+                margin-left: 20px;
+                font-size: 17px;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            .navigator_links a:hover {
+            color: #ff4500;
+            }
+            .manset{
+                background-color: #2c2c2c;
+                padding: 60px 20px;
+                text-align: center;
+                margin: 30px auto;
+                border-radius: 10px;
+                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(megabonk-developer-withdraws-game-from-the-game-awards-sayin_54v4.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .manset_header{
+                font-size: 48px;
+                margin-bottom: 15px;
+                color: #fff;
+                text-shadow: 2px 2px 4px #000;
+                font-weight: bold;
+            }
+            .manset_intr{
+                font-size: 18px;
+                margin-bottom: 25px;
+                color: #ddd;
+            }
+            .buton{
+                display: inline-block;
+                background-color: #ff4500;
+                color: white;
+                padding: 10px 25px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background 0.3s;
+            }
+            .buton:hover{
+                background-color: #e03e00;
+            }
+            .section_title{
+                border-left: 5px solid #ff4500;
+                padding-left: 15px;
+                margin-bottom: 20px;
+                font-size: 24px;
+                font-weight: 900;
+            }
+            .blog_grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+                margin-bottom: 50px;
+            }
+            .review_card {
+                display: flex;
+                background-color: #1f1f1f;
+                border-color: #333;
+                overflow: hidden;
+                border: 1px solid #e0e0e0;
+                max-width: 900px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .review_card_image{
+                background-color: #333;
+                background-size: cover;
+                background-position: center;
+                flex-basis: 40%;
+                min-width: 250px;
+            }
+            .review_card_content {
+                flex: 1;
+                padding: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .review_card_title {
+                margin: 0;
+                font-size: 24px;
+                color: white;
+            }
+            .review_card_intd{
+                color: #aaa;
+                font-size: 1rem;
+                flex-grow: 1;
+                margin-top: 10px;
+            }
+            .footer {
+                background-color: #000;
+                text-align: center;
+                padding: 20px;
+                margin-top: auto;
+                border-top: 1px solid #333;
+                color: #666;
+                font-size: 14px;
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container navigator">
+                <div class="logo">Game<span class="logospan">log</span></div>
+                <nav class="navigator_links">
+                    <a href="proje.html">Ana Sayfa</a>
+                    <a href="#">İncelemeler</a>
+                    <a href="#">Haberler</a>
+                    <a href="#">İletişim</a>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <section class="manset">
+                <p class="manset_header">Yılın sürprizi Megabonk !</p>
+                <p class="manset_intr">2025'in viral indie oyunu konuşulduğu kadar güzel mi ?</p>
+                <a class="buton" href="#">Yazıyı oku</a>
+            </section>
+            <section>
+                <p class="section_title">
+                    Son İncelemeler
+                </p>
+            </section>
+            <article class="review_card">
+                <div class="review_card_content">
+                    <img class="review_card_image" src="sos2.jpg" alt="blabla"></div>
+                    <h3 class="review_card_title">Retro Oyunlara Dönüş Başladı</h3>
+                    <p class="review_card_intd">Piksel sanatının yükselişi devam ediyor. Bu ayın en iyi indie oyunlarını sizin için derledik.</p>
+                    <a href="#" class="buton">Devamını Oku</a>
+                </div>
+            </article>
+        </div>
+        <div class="container">
+            <footer class="footer">
+                <div class="container">
+                    <p>&copy; 2025 Gamelog. Tüm hakları saklıdır.</p>
+                    <div style="margin-top: 10px;">
+                        <a href="#" style="color: #aaa; text-decoration: none; margin: 0 10px;">Hakkımızda</a>
+                        <a href="#" style="color: #aaa; text-decoration: none; margin: 0 10px;">Gizlilik</a>
+                        <a href="#" style="color: #aaa; text-decoration: none; margin: 0 10px;">İletişim</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

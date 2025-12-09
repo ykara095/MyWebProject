@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Gamelog
+        </title>
+        <link rel="stylesheet" href="proje.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container navigator">
+                <div class="logo">Game<span class="logospan">log</span></div>
+                <nav class="navigator_links">
+                    <a href="proje.html">Ana Sayfa</a>
+                    <a href="incelemeler.html">İncelemeler</a>
+                    <a href="#">Haberler</a>
+                    <a href="kayit.html">Kayıt Ol</a>
+                    <button onclick="rastgeleOyunOner()" class="random-btn">🎲 Rastgele</button>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <section class="manset">
+                <p class="manset_header">Yılın Oyunu Adayları Belli Oldu !</p>
+                <p class="manset_intr">Yılın sürprizi Clair Obscur: Expedition 33 12 kategoride aday</p>
+                <a class="buton" href="#">Yazıyı oku</a>
+            </section>
+        </div>
+        <div class="container">
+            <section class="section_title">
+                <p>Son İncelemeler</p>
+            </section>
+        </div>
+        <div class="container">
+            <div class="blog-grid">
+                <article class="card">
+                    <div class="card_img">
+                        <span><img src="megabonk-developer-withdraws-game-from-the-game-awards-sayin_54v4.jpg" alt="Megabonk Görseli"></span>
+                    </div>
+                    <div class="card_content">
+                        <p class="card_title">Yılın sürprizi Megabonk !</p>
+                        <p class="card_introduction">2025'in viral indie oyunu konuşulduğu kadar güzel mi ?</p>
+                        <a href="#" class="card_readmore">Devamını Oku →</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card_img">
+                        <span><img src="Death-Stranding-2.jpg" alt="Death Stranding 2 Görseli"></span>
+                    </div>
+                    <div class="card_content">
+                        <p class="card_title">Kojima'nın yeni gözbebeği !</p>
+                        <p class="card_introduction">Death Stranding 2 beklediğimiz oyun mu ?</p>
+                        <a href="#" class="card_readmore">Devamını Oku →</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card_img">
+                        <span><img src="football-manager-26-.jpg" alt="FM26 Görseli"></span>
+                    </div>
+                    <div class="card_content">
+                        <p class="card_title">2 yıllık hayal kırıklığı...</p>
+                        <p class="card_introduction">Kötü yorum yağmuruna tutulan FM26'yı biz beğendik mi ?</p>
+                        <a href="#" class="card_readmore">Devamını Oku →</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card_img">
+                        <span><img src="hades2.png" alt="Hades2 Görseli"></span>
+                    </div>
+                    <div class="card_content">
+                        <p class="card_title">Antik Yunana Yeni Yolculuk ! Hades II</p>
+                        <p class="card_introduction">Indie klasiğinin devam oyununu mercek altına alıyoruz</p>
+                        <a href="#" class="card_readmore">Devamını Oku →</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card_img">
+                        <span><img src="maxpayne.jpg" alt="Max Payne Görseli"></span>
+                    </div>
+                    <div class="card_content">
+                        <p class="card_title">Retro Bakış: Max Payne</p>
+                        <p class="card_introduction">Remedy'i 2001'de sahneye çıkaran oyuna retro bir bakış...</p>
+                        <a href="#" class="card_readmore">Devamını Oku →</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card_img">
+                        <span><img src="undertale.jpg" alt="undertale Görseli"></span>
+                    </div>
+                    <div class="card_content">
+                        <p class="card_title">Indie klasik: Undertale</p>
+                        <p class="card_introduction">Bağımsız oyunların elması Undertale hala güzel mi ?</p>
+                        <a href="#" class="card_readmore">Devamını Oku →</a>
+                    </div>
+                </article>
+            </div>
+            <footer class="footer">
+                <div class="container">
+                    <p>&copy; 2025 Gamelog. Tüm hakları saklıdır.</p>
+                    <div style="margin-top: 10px;">
+                        <a href="#" style="color: #aaa; text-decoration: none; margin: 0 10px;">Hakkımızda</a>
+                        <a href="#" style="color: #aaa; text-decoration: none; margin: 0 10px;">Gizlilik</a>
+                        <a href="iletisim.html" style="color: #aaa; text-decoration: none; margin: 0 10px;">İletişim</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="ozelModal" class="modal">
+            <div class="modal-icerik">
+                <span class="kapat-btn" onclick="modalKapat()">&times;</span>
+                <h2>🎲 Gamelog Önerisi</h2>
+                <p id="onerilenOyunMetni">Oyun seçiliyor...</p>
+                <button onclick="modalKapat()" class="modal-tamam-btn">Tamam</button>
+            </div>
+        </div>
+
+        <script>
+            function rastgeleOyunOner() {
+                const oyunListesi = [
+                    "Hades II",
+                    "Death Stranding 2",
+                    "Megabonk",
+                    "Football Manager 2026",
+                    "Max Payne",
+                    "Undertale",
+                    "Baldur's Gate 3",
+                    "Cyberpunk 2077",
+                    "Hollow Knight",
+                    "Elden Ring"
+                ];
+
+                const rastgeleSayi = Math.floor(Math.random() * oyunListesi.length);
+                const secilenOyun = oyunListesi[rastgeleSayi];
+
+                document.getElementById("onerilenOyunMetni").innerHTML = "Bugün şansına çıkan oyun:<br><br><strong style='font-size:1.2em; color: #ff9800;'>" + secilenOyun + "</strong>";
+                
+                document.getElementById("ozelModal").style.display = "block";
+            }
+
+            function modalKapat() {
+                document.getElementById("ozelModal").style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                const modal = document.getElementById("ozelModal");
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim - Gamelog</title>
+    <link rel="stylesheet" href="proje.css">
+    
+    <style>
+        .contact-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh; 
+            padding: 20px;
+        }
+
+        .contact-box {
+            background-color: #1f1f1f;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .contact-title {
+            color: #ff4500; 
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .form-inputbox {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #aaa;
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            background-color: #383838; 
+            border: 1px solid #444;
+            border-radius: 5px;
+            color: white;
+            font-family: inherit;
+            box-sizing: border-box; 
+        }
+        
+        .form-text {
+            width: 100%;
+            min-height: 200px;
+            resize: vertical;
+            line-height: 1.5;
+            padding: 12px;
+            background-color: #383838; 
+            border: 1px solid #444;
+            border-radius: 5px;
+            color: white;
+            font-family: inherit;
+            box-sizing: border-box; 
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #ff4500;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #e03e00;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navigator">
+            <div class="logo">Game<span class="logospan">log</span></div>
+            <nav class="navigator_links">
+                <a href="proje.html">Ana Sayfa</a>
+                <a href="incelemeler.html">İncelemeler</a>
+                <a href="#">Haberler</a>
+                <a href="kayit.html" style="color:#ff4500;">Kayıt Ol</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contact-wrapper">
+        <div class="contact-box">
+            <h2 class="contact-title">Bize Ulaşın</h2>
+            
+            <div>
+                
+                <div class="form-inputbox">
+                    <label class="form-label">Adınız Soyadınız</label>
+                    <input type="text" class="form-input" placeholder="Örn: Ahmet Yılmaz" required>
+                </div>
+
+                <div class="form-inputbox">
+                    <label class="form-label">E-posta Adresiniz</label>
+                    <input type="email" class="form-input" placeholder="Örn: ahmet@mail.com" required>
+                </div>
+
+                <div class="form-inputbox">
+                    <label class="form-label">Konu</label>
+                    <select class="form-input">
+                        <option>Genel Soru</option>
+                        <option>Şikayet</option>
+                        <option>Oyun Önerisi</option>
+                        <option>Hata Bildirimi</option>
+                    </select>
+                </div>
+
+                <div class="form-inputbox">
+                    <label class="form-label">Mesajınız</label>
+                    <textarea class="form-text" placeholder="Mesajınızı buraya yazın..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">GÖNDER</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gamelog. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
