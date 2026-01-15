@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Gamelog</title>
+    <link rel="stylesheet" href="proje.css">
+    <style>
+        .about-section {
+            padding: 50px 0;
+            color: #ccc;
+        }
+        .about-header {
+            color: #ff4500;
+            font-size: 36px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .team-member {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+        .team-member h3 {
+            color: white;
+            margin-bottom: 5px;
+        }
+        .team-member span {
+            color: #ff4500;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container navigator">
+            <div class="logo">Game<span class="logospan">log</span></div>
+            <nav class="navigator_links">
+                <a href="proje.html">Ana Sayfa</a>
+                <a href="incelemeler.html">İncelemeler</a>
+                <a href="Haberler.html">Haberler</a>
+                <a href="kayit.html">Kayıt Ol</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container about-section">
+        <h1 class="about-header">Hakkımızda</h1>
+        <div class="about-content">
+            <p>Gamelog, oyun dünyasındaki en son gelişmeleri, tarafsız incelemeleri ve güncel haberleri oyunseverlere ulaştırmak amacıyla 2025 yılında kurulmuştur.</p>
+            <p>Amacımız, sadece popüler AAA oyunlarını değil, keşfedilmeyi bekleyen bağımsız yapımları da (Indie) mercek altına alarak oyunculara geniş bir perspektif sunmaktır. Tutkulu yazar kadromuzla, oyun kültürünü besleyen içerikler üretmeye devam ediyoruz.</p>
+        </div>
+
+        <h2 style="color: white; margin-top: 50px;">Ekibimiz</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <h3>Yusuf Kara</h3>
+                <span>Genel Yayın Yönetmeni</span>
+            </div>
+            <div class="team-member">
+                <h3>Erenay Aydan</h3>
+                <span>Editör</span>
+            </div>
+            <div class="team-member">
+                <h3>Umut Deniz Ateş</h3>
+                <span>İnceleme Yazarı</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gamelog. Tüm hakları saklıdır.</p>
+            <div style="margin-top: 10px;">
+                <a href="hakkimizda.html" style="color: #aaa; text-decoration: none; margin: 0 10px;">Hakkımızda</a>
+                <a href="gizlilik.html" style="color: #aaa; text-decoration: none; margin: 0 10px;">Gizlilik</a>
+                <a href="iletisim.html" style="color: #aaa; text-decoration: none; margin: 0 10px;">İletişim</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
