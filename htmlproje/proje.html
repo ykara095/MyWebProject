@@ -12,8 +12,22 @@
                 <div class="logo">Game<span class="logospan">log</span></div>
                 <nav class="navigator_links">
                     <a href="proje.html">Ana Sayfa</a>
-                    <a href="incelemeler.html">İncelemeler</a>
-                    <a href="#">Haberler</a>
+                    <div class="dropdown">
+                        <a href="incelemeler.html" class="dropbtn">İncelemeler</a>
+                        <div class="dropdown-content">
+                            <a href="#">PC Oyunları</a>
+                            <a href="#">PlayStation</a>
+                            <a href="#">Xbox</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="Haberler.html">Haberler</a>
+                        <div class="dropdown-content">
+                            <a href="#">Son Haberler</a>
+                            <a href="#">İndirimler</a>
+                            <a href="#">E-Spor</a>
+                        </div>
+                    </div>
                     <a href="kayit.html">Kayıt Ol</a>
                     <button onclick="rastgeleOyunOner()" class="random-btn">🎲 Rastgele</button>
                 </nav>
@@ -35,7 +49,7 @@
             <div class="blog-grid">
                 <article class="card">
                     <div class="card_img">
-                        <span><img src="megabonk-developer-withdraws-game-from-the-game-awards-sayin_54v4.jpg" alt="Megabonk Görseli"></span>
+                        <span><img src="megabonk-developer-withdraws-game-from-the-game-awards-sayin_54v4.jpg" alt="Megabonk Görseli" onclick="gorselAc(this)"></span>
                     </div>
                     <div class="card_content">
                         <p class="card_title">Yılın sürprizi Megabonk !</p>
@@ -45,7 +59,7 @@
                 </article>
                 <article class="card">
                     <div class="card_img">
-                        <span><img src="Death-Stranding-2.jpg" alt="Death Stranding 2 Görseli"></span>
+                        <span><img src="Death-Stranding-2.jpg" alt="Death Stranding 2 Görseli" onclick="gorselAc(this)"></span>
                     </div>
                     <div class="card_content">
                         <p class="card_title">Kojima'nın yeni gözbebeği !</p>
@@ -55,7 +69,7 @@
                 </article>
                 <article class="card">
                     <div class="card_img">
-                        <span><img src="football-manager-26-.jpg" alt="FM26 Görseli"></span>
+                        <span><img src="football-manager-26-.jpg" alt="FM26 Görseli" onclick="gorselAc(this)"></span>
                     </div>
                     <div class="card_content">
                         <p class="card_title">2 yıllık hayal kırıklığı...</p>
@@ -65,7 +79,7 @@
                 </article>
                 <article class="card">
                     <div class="card_img">
-                        <span><img src="hades2.png" alt="Hades2 Görseli"></span>
+                        <span><img src="hades2.png" alt="Hades2 Görseli" onclick="gorselAc(this)"></span>
                     </div>
                     <div class="card_content">
                         <p class="card_title">Antik Yunana Yeni Yolculuk ! Hades II</p>
@@ -75,7 +89,7 @@
                 </article>
                 <article class="card">
                     <div class="card_img">
-                        <span><img src="maxpayne.jpg" alt="Max Payne Görseli"></span>
+                        <span><img src="maxpayne.jpg" alt="Max Payne Görseli" onclick="gorselAc(this)"></span>
                     </div>
                     <div class="card_content">
                         <p class="card_title">Retro Bakış: Max Payne</p>
@@ -85,7 +99,7 @@
                 </article>
                 <article class="card">
                     <div class="card_img">
-                        <span><img src="undertale.jpg" alt="undertale Görseli"></span>
+                        <span><img src="undertale.jpg" alt="undertale Görseli" onclick="gorselAc(this)"></span>
                     </div>
                     <div class="card_content">
                         <p class="card_title">Indie klasik: Undertale</p>
@@ -148,6 +162,21 @@
                     modal.style.display = "none";
                 }
             }
+            function gorselAc(element) {
+                var modal = document.getElementById("gorselModal");
+                var modalImg = document.getElementById("img01");
+                
+                modal.style.display = "block";
+                modalImg.src = element.src; 
+            }
+            function gorselModalKapat() {
+                document.getElementById("gorselModal").style.display = "none";
+            }
+            
         </script>
+        <div id="gorselModal" class="gorsel-modal" onclick="gorselModalKapat()">
+            <span class="gorsel-kapat">&times;</span>
+            <img class="gorsel-modal-icerik" id="img01">
+        </div>
     </body>
 </html>
